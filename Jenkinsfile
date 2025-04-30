@@ -45,7 +45,7 @@ pipeline {
       }
     }
 
-    stage('Instalar Chrome y ChromeDriver') {
+    /*stage('Instalar Chrome y ChromeDriver') {
       steps {
         sh '''
           apt-get update
@@ -54,7 +54,7 @@ pipeline {
           chromedriver --version
         '''
       }
-    }
+    }*/
 
     stage('Levantar la aplicación') {
       steps {
