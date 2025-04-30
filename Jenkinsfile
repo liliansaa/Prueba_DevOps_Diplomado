@@ -47,12 +47,12 @@ pipeline {
 
     stage('Instalar Chrome y ChromeDriver') {
       steps {
-        sh '''
+        sh """
           apt update
           apt install -y chromium-chromedriver chromium-browser
           ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver
           chromedriver --version
-        '''
+        """
       }
     }
 
