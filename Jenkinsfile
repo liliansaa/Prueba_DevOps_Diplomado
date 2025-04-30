@@ -90,6 +90,9 @@ pipeline {
     }
 
     stage('Tests de Selenium') {
+      tools {
+        maven 'mavenlocal'  // El nombre aquí debe coincidir con el que configuraste en Jenkins
+      }
       steps {
         sh 'mvn test -Dtest=com.ejemplo.calculadora.CalculadoraUITest'
       }
