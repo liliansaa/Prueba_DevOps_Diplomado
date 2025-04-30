@@ -91,7 +91,7 @@ pipeline {
 
     stage('Tests de Selenium') {
       steps {
-        sh 'mavenlocal test -Dtest=com.ejemplo.calculadora.CalculadoraUITest'
+        sh 'mvn test -Dtest=com.ejemplo.calculadora.CalculadoraUITest'
       }
     }
 
