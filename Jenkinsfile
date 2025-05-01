@@ -1,9 +1,6 @@
 pipeline {
   agent {
-        docker {
-          image 'jenkins/jenkins:lts-jdk17'
-          args '-u root'
-        }
+      label 'trabajo'
   } // Especifica el label del agente donde debe ejecutarse el trabajo
 
   environment {
