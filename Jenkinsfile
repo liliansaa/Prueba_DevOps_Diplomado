@@ -46,6 +46,7 @@ pipeline {
     }
 
     stage('Instalar Chrome y ChromeDriver') {
+      agent { docker { image 'alpine:3.21.3' } }
       steps {
         sh """
           apk update 
