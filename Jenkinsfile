@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'trabajo' 
+  agent {
         docker {
           image 'jenkins/jenkins:lts-jdk17'
           args '-u root'
