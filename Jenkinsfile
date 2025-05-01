@@ -1,5 +1,10 @@
 pipeline {
-  agent { label 'trabajo' } // Especifica el label del agente donde debe ejecutarse el trabajo
+  agent { label 'trabajo' 
+        docker {
+          image 'jenkins/jenkins:lts-jdk17'
+          args '-u root'
+        }
+  } // Especifica el label del agente donde debe ejecutarse el trabajo
 
   environment {
     JAVA_HOME = tool name: 'JDK-24', type: 'jdk'
