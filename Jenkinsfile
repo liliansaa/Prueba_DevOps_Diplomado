@@ -45,7 +45,7 @@ pipeline {
       }
     }
 
-    stage('Instalar Chrome y ChromeDriver') {
+    /*stage('Instalar Chrome y ChromeDriver') {
       steps {
         sh """
           sudo -s
@@ -55,7 +55,7 @@ pipeline {
           chromedriver --version
         """
       }
-    }
+    }*/
 
     stage('Levantar la aplicación') {
       steps {
