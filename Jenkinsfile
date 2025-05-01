@@ -48,8 +48,8 @@ pipeline {
     stage('Instalar Chrome y ChromeDriver') {
       steps {
         sh """
-          apk update 
-          apk add --no-cache chromium-chromedriver chromium
+          apt update 
+          apt install chromium-chromedriver chromium
           ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin/chromedriver
           chromedriver --version
         """
